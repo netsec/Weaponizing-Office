@@ -2,7 +2,7 @@
 
 ## Introduction:
 I did a talk at [0xC0ffee](https://0xc0ffee.co.za), where I discussed different ways to weaponize microsoft office.
-What was different about the talk, was that these methods have been discovered prior to 2016, and did not require a lot of user interaction to execute the payloads. These methods work great with fishing attacks.
+What was different about the talk, was that these methods have been discovered prior to 2017, and did not require a lot of user interaction to execute the payloads. These methods work great with phishing attacks.
 
 I decided not to use a standard way to present my talk, so [@MTB_m00se](https://twitter.com/MTB_m00se) introduced me to terminal markdown where I found [patat](https://github.com/jaspervdj/patat)
 
@@ -23,9 +23,11 @@ Objective is to capture NTLMv2 hashes by using the above programs. The user shou
 
 ```BONUS: will try to get reverse shells as well```
 
-## 1. Excel (.SLK)
+## 1. Excel (.SLK)[https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)]
 
-An SLK file is a file saved in the Symbolic Link (SYLK) format created by Microsoft to transfer data between spreadsheet programs and other databases. 
+> An SLK file is a file saved in the Symbolic Link (SYLK) format created by Microsoft to transfer data between spreadsheet programs and other databases. 
 
-###
+I found this exploit on [ired.team](https://ired.team/offensive-security/phishing-with-ms-office/phishing-.slk-excel) which gave a great walkthrough oh how to exactact perform RCE in an SLK file.
+
+### Excel RCE - Powershell Reverse shell
 ![](excel_NTLMv2_hash_capture.gif)

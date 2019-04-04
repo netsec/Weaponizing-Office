@@ -42,8 +42,8 @@ C;X1;Y102;K0;EHALT()
 E
 ```
 
-2.
-3.
+2. DONE `HOLY SHIT THAT WAS HARD`
+
 
 #### CApture NTLMv2 Hash
 

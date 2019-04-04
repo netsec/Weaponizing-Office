@@ -129,6 +129,6 @@ xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
 ````
 8. DONE!!!
 
-![](word_capture_hash.gif)
+POC is too long to make a GIF
 
 More information on [Framesets](https://pentestlab.blog/2017/12/18/microsoft-office-ntlm-hashes-via-frameset/)

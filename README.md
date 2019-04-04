@@ -33,4 +33,4 @@ I found this exploit on [ired.team](https://ired.team/offensive-security/phishin
 ![](excel_NTLMv2_hash_capture.gif)
 
 
-More on (Symbolic Link)[https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)] files
+More on [Symbolic Link](https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)) files

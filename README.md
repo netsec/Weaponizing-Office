@@ -7,7 +7,7 @@ What was different about the talk, was that these methods have been discovered p
 
 I decided not to use a standard way to present my talk, so [@MTB_m00se](https://twitter.com/MTB_m00se) introduced me to terminal markdown where I found [patat](https://github.com/jaspervdj/patat)
 
-I recently discovered a tool called [Responder[(https://github.com/SpiderLabs/Responder), which I used in my talk.
+I recently discovered a tool called (Responder)[https://github.com/SpiderLabs/Responder], which I used in my talk.
 I mainly used Responder to capture NTLMv2 hashes from victom machines.
 
 I found a great [article](https://medium.com/@petergombos/lm-ntlm-net-ntlmv2-oh-my-a9b235c58ed4) explaining what is NTLMv2 hashes and what can be done with it.

@@ -1,5 +1,5 @@
 # Weaponizing-Office
-[iKnadt](https://twitter.com/iKnadt)
+twitter: [iKnadt](https://twitter.com/iKnadt)
 
 ## Introduction:
 I did a talk at [0xC0ffee](https://0xc0ffee.co.za), where I discussed different ways to weaponize microsoft office.

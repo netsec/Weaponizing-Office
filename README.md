@@ -19,4 +19,12 @@ Below is a short extract from the article:
 2. Outlook (file://)
 3. Word (frameset)
 
+Objective is to capture NTLMv2 hashes by using the above programs. The user should not have to do more than 1 click after downloading the office file. 
+
+```BONUS: will try to get reverse shells as well```
+
 ## 1. Excel (.SLK)
+
+An SLK file is a file saved in the Symbolic Link (SYLK) format created by Microsoft to transfer data between spreadsheet programs and other databases. 
+
+###

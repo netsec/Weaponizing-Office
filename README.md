@@ -23,9 +23,9 @@ Objective is to capture NTLMv2 hashes by using the above programs. The user shou
 
 ```BONUS: will try to get reverse shells as well```
 
-## 1. Excel (.SLK)[https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)]
+## 1. Excel (.SLK)
 
-> An SLK file is a file saved in the Symbolic Link (SYLK) format created by Microsoft to transfer data between spreadsheet programs and other databases. 
+> An SLK file is a file saved in the Symbolic Link (SYLK)[https://en.wikipedia.org/wiki/SYmbolic_LinK_(SYLK)] format created by Microsoft to transfer data between spreadsheet programs and other databases. 
 
 I found this exploit on [ired.team](https://ired.team/offensive-security/phishing-with-ms-office/phishing-.slk-excel) which gave a great walkthrough oh how to exactact perform RCE in an SLK file.
 

